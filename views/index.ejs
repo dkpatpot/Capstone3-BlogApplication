@@ -17,7 +17,7 @@
 
         <p><%= posts[index].content %></p>
 
-        <form action="/edit" method="post">
+        <form action="/edit/<%= posts[index].id %>" method="post">
           <input type="hidden" name="postId" value="<%= posts[index].id %>" />
           <input class="edit" type="submit" value="Edit" />
         </form>
@@ -30,18 +30,23 @@
       <h3>There is no post here.</h3>
       <% } %>
     </div>
-    
+
     <div class="col-md-4">
       <div class="position-sticky" style="top: 2rem">
         <div>
           <h4 class="fst-italic">Recent posts</h4>
           <ul class="list-unstyled">
+            <% if(locals.posts) { for (let index = 0; index < posts.length;
+            index++){%>
             <li>
               <div class="col-lg-8">
-                <h6 class="mb-0">Example blog post title</h6>
-                <small class="text-body-secondary">January 15, 2023</small>
+                <h6 class="mb-0"><%= posts[index].topic %></h6>
+                <small class="text-body-secondary"><%= (posts[index].date).toDateString() %></small>
               </div>
             </li>
+            <%}%> <% }else{ %>
+            <h3>There is no post here.</h3>
+            <% } %>
           </ul>
         </div>
       </div>

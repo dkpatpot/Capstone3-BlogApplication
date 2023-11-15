@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+<div class="container my-5">
+  <div class="p-5 text-center bg-body-tertiary rounded-3">
+    <h1 class="text-body-emphasis">Create new posty.</h1>
+    <p class="col-lg-8 mx-auto fs-5 text-muted">
+        <form action="/createpost" method="post">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="name" placeholder="Name">
+                <label for="floatingInput">Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="topic" placeholder="Topic">
+                <label for="floatingInput">Blog topic</label> 
+              </div>
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Content" name="content" style="height: 200px"></textarea>
+                <label for="floatingTextarea2">Content</label>
+              </div>
+              <input class ="create" type="submit" value="Create" />
+        </form>
+    </p>
+
+  </div>
+</div>
+<%- include("partials/footer.ejs") %>

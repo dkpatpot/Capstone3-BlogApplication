@@ -1,0 +1,42 @@
+.create {
+    width: 15%;
+    background: #3586ff;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size:18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    font-weight: 700;
+  }
+.edit {
+    background: green;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size:12px;
+    padding-top: 10px;
+    padding-bottom: 10px;   
+    padding-left: 10px;
+    padding-right: 10px; 
+    font-weight: 700;
+    margin-right: 10px;
+    clear: both;
+    float:left;
+}
+.delete {
+    background: red;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size:12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 700;
+}

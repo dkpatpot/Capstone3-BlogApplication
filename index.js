@@ -33,7 +33,6 @@ app.post("/createpost", (req, res) => {
 app.post("/delete", (req, res) => {
     const postIdToDelete = req.body.postId;
     const indexToDelete = posts.findIndex(post => post.id === postIdToDelete);
-  
     if (indexToDelete !== -1) {
       posts.splice(indexToDelete, 1);
     }
